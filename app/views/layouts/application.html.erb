@@ -8,20 +8,22 @@
 
 <style>
 #wrapper{
-	background:#EFEFCC;
+  background-image:url('wb-bg.png');
 }
 
-#wrapper, #header, #menu, #content, #footer{
-	border: solid 1px;
+#wrapper, #header,#footer{
+  border: solid 1px;
 }
 
 #header{
-	height:100px;
+	height:70px;
+  text-align:center;
 }
 
 #menu{
 	float:left;
 	width:18%;
+  padding:5px;
 }
 
 #content{
@@ -29,16 +31,25 @@
 	width:81%;
 }
 
-#footer{clear:both;}
+#footer{
+  clear:both;
+  text-align:center;
+}
 </style>
 
 </head>
 <body>
+<title><%= @pagetitle %></title>
 <div id="wrapper">
-	<div id="header"><%= yield %></div>
-	<div id="menu">menu</div>
-	<div id="content">content</div>
-	<div id="footer">footer</div>
+	<div id="header"><h1>Agile Release Planning Game</h1></div>
+	<div id="menu">
+    <li><%= link_to 'Home', {:controller => 'project', :action => 'home'} %></li>    
+    <li><%= link_to 'Iterations', {:controller => 'project', :action => 'iterations'} %></li>    
+    <li><%= link_to 'Stories', {:controller => 'project', :action => 'stories'} %></li>    
+    <li><%= link_to 'Requirements', {:controller => 'project', :action => 'requirements'} %></li>    
+  </div>
+	<div id="content"><%= yield %></div>
+	<div id="footer">Time now is <%= Time.now %></div>
 </div>
 </body>
 </html>
