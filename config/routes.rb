@@ -1,6 +1,8 @@
 App01::Application.routes.draw do
   get "project/home"
 
+  get "project/cardwall"
+
   get "project/iterations"
 
   get "project/stories"

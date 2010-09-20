@@ -9,19 +9,26 @@
 
 #header{
 	height:200px;
-  text-align:center;
+    text-align:center;
 }
 
 #menu{
 	float:left;
-	width:18%;
-  padding:5px;
+	width:16%;
+    padding:20px 0 20px 18px;
 }
+
+#menu li{
+    list-style-type:none; 
+}
+
 
 #content{
 	float:right;
-	width:81%;
-  padding:1px;
+	width:80%;
+    padding:20px 28px 20px 11px;
+    height:100%;
+
 }
 
 #footer{
