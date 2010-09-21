@@ -1,4 +1,6 @@
 App01::Application.routes.draw do
+  resources :stories
+
   get "project/home"
 
   get "project/cardwall"

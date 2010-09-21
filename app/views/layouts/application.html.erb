@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>App01</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
@@ -15,7 +14,7 @@
     <li><%= link_to 'Home', {:controller => 'project', :action => 'home'} %></li>    
     <li><%= link_to 'Card Wall', {:controller => 'project', :action => 'cardwall'} %></li>   
     <li><%= link_to 'Iterations', {:controller => 'project', :action => 'iterations'} %></li>    
-    <li><%= link_to 'Stories', {:controller => 'project', :action => 'stories'} %></li>    
+    <li><%= link_to 'Stories', {:controller => 'stories', :action => 'index'} %></li>    
     <li><%= link_to 'Requirements', {:controller => 'project', :action => 'requirements'} %></li>    
   </div>
 	<div id="content"><%= yield %></div>
