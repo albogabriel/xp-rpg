@@ -3,10 +3,10 @@
 <% @stories.each do |story| %>
 <!--%if story.title == "Build Air Generator" %--> 
   <div class="storySticky">
-    <div><b><%= story.id %> - <%= story.title %></b></div><br>
-    <div><%= story.description %></div><br>
-    <div><b>Estimate: </b><%= story.estimate %></div>  
-	<div><b>Status: </b><%= story.status %></div><br>
+    <h2><%= story.id %> - <%= story.title %></h2>
+    <p><%= story.description %></p>
+    <p><b>Estimate: </b><%= story.estimate %></p>  
+	<p><b>Status: </b><%= story.status %></p>
     <div style="text-align:center"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %> - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %></div>
   </div>
 <!--%end if%-->
