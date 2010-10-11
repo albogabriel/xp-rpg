@@ -2,7 +2,7 @@
 
 <% @stories.each do |story| %>
 <!--%if story.title == "Build Air Generator" %--> 
-  <div class="storySticky" style="background:yellow; width:200px; padding:6px;">
+  <div class="storySticky">
     <div><b><%= story.id %> - <%= story.title %></b></div><br>
     <div><%= story.description %></div><br>
     <div><b>Estimate: </b><%= story.estimate %></div>  
