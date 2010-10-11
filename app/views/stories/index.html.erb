@@ -1,31 +1,16 @@
-<h1>Listing stories</h1>
-
-<table>
-  <tr>
-    <th>Id</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Estimate</th>
-    <th>Status</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1>Stories</h1>
 
 <% @stories.each do |story| %>
-  <tr>
-    <td><%= story.id %></td>
-    <td><%= story.title %></td>
-    <td><%= story.description %></td>
-    <td><%= story.estimate %></td>
-    <td><%= story.status %></td>
-    <td><%= link_to 'Show', story %></td>
-    <td><%= link_to 'Edit', edit_story_path(story) %></td>
-    <td><%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<!--%if story.title == "Build Air Generator" %--> 
+  <div class="storySticky" style="background:yellow; width:200px; padding:6px;">
+    <div><b><%= story.id %> - <%= story.title %></b></div><br>
+    <div><%= story.description %></div><br>
+    <div><b>Estimate: </b><%= story.estimate %></div>  
+	<div><b>Status: </b><%= story.status %></div><br>
+    <div style="text-align:center"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %> - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %></div>
+  </div>
+<!--%end if%-->
+<br><br>
 <% end %>
-</table>
-
-<br />
 
 <%= link_to 'New Story', new_story_path %>
