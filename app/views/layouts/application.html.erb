@@ -17,10 +17,10 @@
     <li><%= link_to 'Card Wall', {:controller => 'project', :action => 'cardwall'} %></li>   
     <li><%= link_to 'Iterations', {:controller => 'project', :action => 'iterations'} %></li>    
     <li><%= link_to 'Stories', {:controller => 'stories', :action => 'index'} %></li>    
-    <li><%= link_to 'Requirements', {:controller => 'project', :action => 'requirements'} %></li>    
+    <li><%= link_to 'About', {:controller => 'project', :action => 'about'} %></li>    
   </div>
 	<div id="content"><%= yield %></div>
-	<div id="footer">Time now is <%= Time.now.day%>/<%= Time.now.month%>/<%= Time.now.year%></div>
+	<div id="footer">Time now is <%= Time.now%></div>
 </div>
 </body>
 </html>

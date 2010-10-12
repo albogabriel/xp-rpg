@@ -13,5 +13,8 @@ class ProjectController < ApplicationController
 
   def requirements
   end
+  
+  def about
+  end
 
 end

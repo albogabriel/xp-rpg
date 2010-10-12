@@ -10,6 +10,8 @@ App01::Application.routes.draw do
   get "project/stories"
 
   get "project/requirements"
+  
+  get "project/about"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
