@@ -14,7 +14,7 @@
 .stickyLogo{
 	margin:0 auto;
 	background:#FEFEBA; 
-	width:250px; 
+	width:260px; 
 	min-height:100px;
 	padding:6px;
 	/* Firefox */  
@@ -26,8 +26,9 @@
 }
 
 .stickyLogo p{
-font-family: 'Yanone Kaffeesatz', serif;
-	font-size:250%;
+ /*   font-family: 'Yanone Kaffeesatz', serif;*/
+	font-family: 'Neucha', serif;
+	font-size:200%;
 	color:#0F0F0F;
 }
 
@@ -44,17 +45,43 @@ font-family: 'Yanone Kaffeesatz', serif;
     padding:20px 0 20px 18px;
 }
 
-#menu li{
+.menuItem{
+	text-decoration:none;
+	font-family: 'Neucha', serif;
+	font-size:180%;
+	color:black;
     list-style-type:none; 
+	text-align:center;
+	background:#cfc; 
+	width:40; 
+	min-height:40px;
+	padding-top:20px;
+	margin:15px 0;
+	/* Firefox */  
+	-moz-box-shadow:5px 5px 7px rgba(33,33,33,1);  
+	/* Safari+Chrome */  
+	-webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);  
+	/* Opera */  
+	box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
 
+.menuItem:hover,.storySticky:focus{
+	   -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);  
+	   -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);  
+	   box-shadow:10px 10px 7px rgba(0,0,0,.7);  
+	   -webkit-transform: scale(1.0);  
+	   -moz-transform: scale(1.0);  
+	   -o-transform: scale(1.0);  
+	   position:relative;  
+	   z-index:5;
+}
 
 #content{
 	float:right;
-	width:85%;
+	width:84%;
     padding:20px 28px 20px 11px;
     height:100%;
-
+	
 }
 
 #footer{
@@ -70,8 +97,8 @@ font-family: 'Yanone Kaffeesatz', serif;
 }
 
 .storySticky h2{
-	font-family: arial
-	font-size:100%;
+	font-family: "Neucha";
+	font-size:200%;
 }
 
 .storySticky p{
@@ -79,7 +106,7 @@ font-family: 'Yanone Kaffeesatz', serif;
 	font-size:180%;
 }
 
-/* Shadow property*/
+/* Sticky Shadow property*/
 .storySticky{
 	/* Firefox */  
 	-moz-box-shadow:5px 5px 7px rgba(33,33,33,1);  
@@ -89,14 +116,14 @@ font-family: 'Yanone Kaffeesatz', serif;
 	box-shadow: 5px 5px 7px rgba(33,33,33,.7);
 }
 
-/* Zoom effect*/
+/* Sticky Zoom effect*/
 .storySticky:hover,.storySticky:focus{
 	   -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);  
 	   -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);  
 	   box-shadow:10px 10px 7px rgba(0,0,0,.7);  
-	   -webkit-transform: scale(1.25);  
-	   -moz-transform: scale(1.25);  
-	   -o-transform: scale(1.25);  
+	   -webkit-transform: scale(1.15);  
+	   -moz-transform: scale(1.15);  
+	   -o-transform: scale(1.15);  
 	   position:relative;  
 	   z-index:5;
 }
