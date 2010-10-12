@@ -8,13 +8,39 @@
 }
 
 #header{
-	height:200px;
     text-align:center;
+}
+
+.stickyLogo{
+	margin:0 auto;
+	background:#FEFEBA; 
+	width:250px; 
+	min-height:100px;
+	padding:6px;
+	/* Firefox */  
+	-moz-box-shadow:5px 5px 7px rgba(33,33,33,1);  
+	/* Safari+Chrome */  
+	-webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);  
+	/* Opera */  
+	box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+
+.stickyLogo p{
+font-family: 'Yanone Kaffeesatz', serif;
+	font-size:250%;
+	color:#0F0F0F;
+}
+
+.logoTitle{
+	padding-top:30px;
+	font-family:"Reenie Beanie",arial,sans-serif;  
+	color:#DD0000;
+	font-size:600%;
 }
 
 #menu{
 	float:left;
-	width:16%;
+	width:10%;
     padding:20px 0 20px 18px;
 }
 
@@ -25,7 +51,7 @@
 
 #content{
 	float:right;
-	width:80%;
+	width:85%;
     padding:20px 28px 20px 11px;
     height:100%;
 
