@@ -1,17 +1,17 @@
 App01::Application.routes.draw do
+  resources :iterations
+
   resources :stories
 
   get "project/home"
 
   get "project/cardwall"
 
-  get "project/iterations"
-
-  get "project/stories"
-
   get "project/requirements"
   
   get "project/about"
+
+  get "iterations/index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
