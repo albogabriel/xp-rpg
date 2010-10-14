@@ -1,17 +1,16 @@
 <h1>Stories</h1>
 <br>
-<div class="storiesContainer">
 <% @stories.each do |story| %>
-	  
-<div class="storySticky">
-	    <h2><%= story.id %> - <%= story.title %></h2>
-	    <p><%= story.description %></p>
-	    <p><b>Estimate: </b><%= story.estimate %></p>  
-		<p><b>Status: </b><%= story.status %></p>
-	    <div style="text-align:center"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %> - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %></div>
-<br>
-	  </div>
-<br>
+<!--%if story.title == "Build Air Generator" %--> 
+  <div class="storySticky">
+    <h2><%= story.id %> - <%= story.title %></h2>
+    <p><%= story.description %></p>
+    <p><b>Estimate: </b><%= story.estimate %></p>  
+	<p><b>Status: </b><%= story.status %></p>
+    <div style="text-align:center"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %> - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %></div>
+  </div>
+<!--%end if%-->
+<br><br>
 <% end %>
-</div>
+
 <%= link_to 'New Story', new_story_path %>

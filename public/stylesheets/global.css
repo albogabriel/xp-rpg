@@ -89,20 +89,6 @@
   text-align:center;
 }
 
-.storiesContainer{
-	width:40em;
-clear:left;
-}
-
-.storiesContainer storySticky{
-	float:left;
-	width:10em;
-}
-
-.storiesContainer br{
-	
-}
-
 /* Basic Style for the stickies*/
 .storySticky{
 	background:#FEFEBB; 
