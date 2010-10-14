@@ -2,22 +2,16 @@
 
 <table>
   <tr>
-    <th>Id</th>
-    <th>Label</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @iterations.each do |iteration| %>
-  <tr>
     <td><%= iteration.id %></td>
-    <td><%= iteration.label %></td>
+    <!--td><%= iteration.label %></td>
     <td><%= link_to 'Show', iteration %></td>
     <td><%= link_to 'Edit', edit_iteration_path(iteration) %></td>
-    <td><%= link_to 'Destroy', iteration, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', iteration, :confirm => 'Are you sure?', :method => :delete %></td-->
   </tr>
 <% end %>
+
+
 </table>
 
 <br />
