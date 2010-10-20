@@ -1,24 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Id:</b>
-  <%= @iteration.id %>
-</p>
+<h1>
+  <b>Iteration <%= @iteration.label %></b>
+</h1>
+<div style="margin-bottom:30px;">
+	<%= link_to 'Edit', edit_iteration_path(@iteration) %> | <%= link_to 'Back', iterations_path %>
+</div>
 
-<p>
-  <b>Label:</b>
-  <%= @iteration.label %>
-</p>
-
-<h2>Stories</h2>
+<ul>
 <% @iteration.stories.each do |story| %>
-  <p>
-    <b>Title:</b>
-    <%= story.title %>
-  </p>
-
+  <li class="storySticky">
+    <h2><%= story.id %> - <%= story.title %></h2>
+    <p><%= story.description %></p>
+    <p><b>Estimate: </b><%= story.estimate %></p>  
+	<p><b>Status: </b><%= story.status %></p>
+	<p><b>Iteration: </b><%= story.iteration_id %></p>
+    <div style="text-align:center"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %> - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %></div>
+  </li>
 <% end %>
 
-
-<%= link_to 'Edit', edit_iteration_path(@iteration) %> |
-<%= link_to 'Back', iterations_path %>
+<!-- <li class="newItem"><%= link_to 'New Story', new_story_path %></li></ul> -->
