@@ -7,6 +7,7 @@
     <p><%= story.description %></p>
     <p><b>Estimate: </b><%= story.estimate %></p>  
 	<p><b>Status: </b><%= story.status %></p>
+	<p><b>Iteration: </b><%= story.iteration_id %></p>
     <div style="text-align:center"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %> - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %></div>
   </li>
 <% end %>

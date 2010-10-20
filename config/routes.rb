@@ -45,6 +45,10 @@ App01::Application.routes.draw do
   #     resource :seller
   #   end
 
+  resources :iterations do
+    resources :stories
+  end
+
   # Sample resource route with more complex sub-resources
   #   resources :products do
   #     resources :comments

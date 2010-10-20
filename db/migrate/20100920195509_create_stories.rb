@@ -1,11 +1,12 @@
 class CreateStories < ActiveRecord::Migration
   def self.up
-    create_table :stories do |t|
+    alter_table :stories do |t|
       t.string :id
       t.string :title
       t.text :description
       t.string :estimate
       t.string :status
+      t.references :iteration_id
 
       t.timestamps
     end
