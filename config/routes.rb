@@ -1,4 +1,9 @@
 App01::Application.routes.draw do
+  
+  resources :iterations do
+     resources :stories
+   end
+   
   resources :iterations
 
   resources :stories
@@ -45,11 +50,7 @@ App01::Application.routes.draw do
   #     resource :seller
   #   end
 
-  resources :iterations do
-    resources :stories
-  end
-
-  # Sample resource route with more complex sub-resources
+   # Sample resource route with more complex sub-resources
   #   resources :products do
   #     resources :comments
   #     resources :sales do
@@ -66,7 +67,7 @@ App01::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+   root :to => "project#home"
 
   # See how all your routes lay out with "rake routes"
 

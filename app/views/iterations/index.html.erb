@@ -1,25 +1,16 @@
-<h1>Listing iterations</h1>
+<h2>Iterations</h2>
 
-<table>
-  <tr>
-    <th>Id</th>
-    <th>Label</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<uL>
 <% @iterations.each do |iteration| %>
-  <tr>
-    <td><%= iteration.id %></td>
-    <td><%= iteration.label %></td>
-    <td><%= link_to 'Show', iteration %></td>
-    <td><%= link_to 'Edit', edit_iteration_path(iteration) %></td>
-    <td><%= link_to 'Destroy', iteration, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<li class="iteration" style="border:3px gray dashed; padding:6px;">
+    <h2 style="text-align:center;"><%= iteration.label %></h2>
+    <div><%= link_to 'Show', iteration %> - 
+	<%= link_to 'Edit', edit_iteration_path(iteration) %> - 
+	<%= link_to 'Destroy', iteration, :confirm => 'Are you sure?', :method => :delete %>
+	</div>
+</li>
 <% end %>
-</table>
-
+</ul>
 <br />
 
 <%= link_to 'New Iteration', new_iteration_path %>

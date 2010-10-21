@@ -41,9 +41,7 @@ class StoriesController < ApplicationController
   # POST /stories.xml
   def create
     @story = Story.new(params[:story])
-    @iteration = Story.find(params[:post_id])
-       @story = @iteration.stories.create(params[:stories])
-       redirect_to post_path(@post)
+    #redirect_to iteration_path(@iteration)
 
     respond_to do |format|
       if @story.save
