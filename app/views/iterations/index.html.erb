@@ -3,7 +3,7 @@
 <uL>
 <% @iterations.each do |iteration| %>
 <li class="iteration" style="border:3px gray dashed; padding:6px;">
-    <h2 style="text-align:center;"><%= iteration.label %></h2>
+    <h2 style="text-align:center;">#<%= iteration.label %></h2>
     <div><%= link_to 'Show', iteration %> - 
 	<%= link_to 'Edit', edit_iteration_path(iteration) %> - 
 	<%= link_to 'Destroy', iteration, :confirm => 'Are you sure?', :method => :delete %>

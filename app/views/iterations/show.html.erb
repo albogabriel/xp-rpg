@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>
-  <b>Iteration <%= @iteration.label %></b>
+  <b>Iteration #<%= @iteration.label %></b>
 </h1>
 <div style="margin-bottom:30px;">
 	<%= link_to 'Edit', edit_iteration_path(@iteration) %> | <%= link_to 'Back', iterations_path %>
@@ -18,5 +18,3 @@
     <div style="text-align:center"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %> - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %></div>
   </li>
 <% end %>
-
-<!-- <li class="newItem"><%= link_to 'New Story', new_story_path %></li></ul> -->
