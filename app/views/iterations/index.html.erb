@@ -2,12 +2,25 @@
 
 <uL>
 <% @iterations.each do |iteration| %>
-<li class="iteration" style="border:3px gray dashed; padding:6px;">
-    <h2 style="text-align:center;">#<%= iteration.label %></h2>
-    <div><%= link_to 'Show', iteration %> - 
+<li class="iteration" style="border:3px gray dashed; padding:6px; width:350px;">
+    <h2 style="text-align:center;">#<%= iteration.label %></h2>		
+	<div style="text-align:center"><%= link_to 'Show', iteration %> - 
 	<%= link_to 'Edit', edit_iteration_path(iteration) %> - 
 	<%= link_to 'Destroy', iteration, :confirm => 'Are you sure?', :method => :delete %>
 	</div>
+	<br>
+	<ul>
+	<% iteration.stories.each do |story| %>
+	 <li class="storySticky">
+	    <h2>#<%= story.id %> - <%= story.title %></h2>
+	    <div class="storyItem"><%= story.description %></div>
+	    <div class="storyItem"><b>Estimate: </b><%= story.estimate %></div>  
+		<div class="storyItem"><b>Status: </b><%= story.status %></div>
+		<div class="storyItem"><b>Iteration: </b><%= story.iteration_id %></div>
+	    <div style="text-align:center"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %> - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %></div>
+	  </li>
+		<% end %>
+	</ul>
 </li>
 <% end %>
 </ul>
