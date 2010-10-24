@@ -11,9 +11,9 @@
 	<br>
 	<ul>
 	<% iteration.stories.each do |story| %>
-	 <li class="storySticky">
+	 <li class="storySticky" style="height:200px">
 	    <h2>#<%= story.id %> - <%= story.title %></h2>
-	    <div class="storyItem"><%= story.description %></div>
+	    <!--div class="storyItem"><%= story.description %></div-->
 	    <div class="storyItem"><b>Estimate: </b><%= story.estimate %></div>  
 		<div class="storyItem"><b>Status: </b><%= story.status %></div>
 		<div class="storyItem"><b>Iteration: </b><%= story.iteration_id %></div>

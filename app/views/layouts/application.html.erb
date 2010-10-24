@@ -12,14 +12,15 @@
 <body>
 <title>XP Release Planning Game</title>
 <div id="wrapper">
-	<div id="header"><div class="stickyLogo"><div class="logoTitle"><b>XP</b></div><p><b>Release Planning Game</b></p></div></div>
-	<div id="menu">
+	<div id="header">
+  <div class="stickyLogo" ><div class="logoTitle"><b>XP</b></div><p><b>Release Planning Game</b></p></div>
+	<div class="menu">
     	<div class="menuItem" onclick="window.location = '<%= url_for :controller =>'project', :action => 'home' %>'">Home</div>
     	<!-- <div class="menuItem" onclick="window.location = '<%= url_for :controller =>'project', :action => 'cardwall' %>'">Cardwall</div> -->
     	<div class="menuItem" onclick="window.location = '<%= url_for :controller =>'iterations', :action => 'index' %>'">Iterations</div>   
     	<div class="menuItem" onclick="window.location = '<%= url_for :controller =>'stories', :action => 'index' %>'">Stories</div>    
     	<div class="menuItem" onclick="window.location = '<%= url_for :controller =>'project', :action => 'about' %>'">About</div>
-  	</div>
+  </div>
 	<div id="content"><%= yield %></div>
 	<div id="footer">Time now is <%= Time.now%></div>
 </div>
