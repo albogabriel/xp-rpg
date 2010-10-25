@@ -2,7 +2,7 @@
 
 <uL>
 <% @iterations.each do |iteration| %>
-<li class="iteration" style="border:3px gray dashed; padding:6px; width:350px;">
+<li class="iterationLane">
     <h2 style="text-align:center;">#<%= iteration.label %></h2>		
 	<div style="text-align:center"><%= link_to 'Show', iteration %> - 
 	<%= link_to 'Edit', edit_iteration_path(iteration) %> - 

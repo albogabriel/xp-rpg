@@ -4,7 +4,7 @@
 }
 
 #wrapper, #header,#footer{
-  padding:5px;
+    padding:5px;
 }
 
 #header{
@@ -19,7 +19,7 @@
 	padding:6px 6px 26px 6px;
     float:left;
 	/* Firefox */  
-	-moz-box-shadow:5px 5px 7px rgba(33,33,33,1);  
+	-moz-box-shadow:5px 5px 7px rgba(33,33,33,1); 
 	/* Safari+Chrome */  
 	-webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);  
 	/* Opera */  
@@ -28,14 +28,14 @@
 
 .stickyLogo p{
  /*   font-family: 'Yanone Kaffeesatz', serif;*/
-	font-family: 'Neucha', serif;
+	font-family: 'Neucha', 'Helvetica', serif;
 	font-size:198%;
 	color:#0F0F0F;
 }
 
 .logoTitle{
 	padding-top:30px;
-	font-family:"Reenie Beanie",arial,sans-serif;  
+	font-family:"Reenie Beanie",'Helvetica',sans-serif;  
 	color:#DD0000;
 	font-size:600%;
 }
@@ -50,7 +50,7 @@
 .menuItem, .newItem{
 	text-decoration:none;
 	font-family: 'Neucha', serif;
-	font-size:180%;
+	font-size:200%;
 	color:black;
 	list-style-type:none; 
 	text-align:center;
@@ -66,8 +66,8 @@
 
 .menuItem{
 	background:#cfc; 
-	padding-top:20px;
-	margin:15px 0 0 20px;
+	padding:36px 22px 16px 22px;
+	margin:0px 0 0 20px;
     float:left;
     width:160px;
 }
@@ -88,14 +88,29 @@
 	   -o-transform: scale(1.0);  
 	   position:relative;  
 	   z-index:5;
+    -moz-transition:-moz-transform .15s linear;  
+    -o-transition:-o-transform .15s linear;  
+    -webkit-transition:-webkit-transform .15s linear;  
 }
 
 #content{
-    width: 100%;
-	padding:10px 28px 20px 11px;
-    height:100%;
-    clear:both;
+		text-align:justify;
+		width:-moz-max-content;
+		padding:10px 0 10px 5px;
+		height:100%;
+		clear:both;
 }
+
+.iterationLane{
+    border:3px gray dashed; 
+    padding:0px; 
+    width:300px;
+}
+
+.iterationLane ul li{
+	margin: 0 0em 2em -2em;
+}
+
 
 #footer{
 	clear:both;
@@ -103,7 +118,7 @@
 }
 
 /* Basic Style for the stickies*/
-.storySticky{
+.storySticky{ 
 	background:#FEFEBB; 
 	width:250px;
 	height:320px; 
@@ -113,6 +128,7 @@
 .storySticky h2{
 	font-family: "Neucha";
 	font-size:200%;
+    text-align:center;
 }
 
 .storyItem{
@@ -139,9 +155,14 @@
 	 -webkit-transform: scale(1.15);  
 	 -moz-transform: scale(1.15);  
 	 -o-transform: scale(1.15);  
+    -moz-transition:-moz-transform .15s linear;  
+    -o-transition:-o-transform .15s linear;  
+    -webkit-transition:-webkit-transform .15s linear;  
+
 	 position:relative;  
 	 z-index:5;
-}
+	     
+	 }
 
 ul li a{
 	text-decoration:none;

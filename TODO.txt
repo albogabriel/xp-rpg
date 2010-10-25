@@ -1,3 +1,3 @@
 TODO list
 
-- create different sticky note style for the cardwall view. This style must be smaller (i.e., without the whole description) but there must be some css transformation to allow the user to see it full sized (apart from the show Iteration view)
+- content class has been defined with a -moz-max-content width, which only works for firefox. Chrome version should be found.
