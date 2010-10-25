@@ -105,7 +105,7 @@ body{
 }
 
 .iterationLane{
-    border:3px gray dashed; 
+    border:3px #F0F0F0 dashed; 
     padding:0px; 
     width:300px;
 }
