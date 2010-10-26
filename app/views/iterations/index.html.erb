@@ -3,7 +3,7 @@
 <ul>
 	<% @iterations.each do |iteration| %>
 		<li class="iterationLane">
-			<h2 style="text-align:center;">Iteration #<%= iteration.label %></h2>		
+			<h2 style="text-align:center;">Iteration #<%= iteration.label %></h2>
 			<div style="text-align:center">
 				<%= link_to 'Show', iteration %> - 
 				<%= link_to 'Edit', edit_iteration_path(iteration) %> - 
@@ -24,8 +24,8 @@
 	</ul>
 		</li>
 <% end %>
-<li>
-	<div class="newItem"><%= link_to 'New Iteration', new_iteration_path %></li></ul>
-</li>
+	<li>
+		<div class="newItem"><%= link_to 'New Iteration', new_iteration_path %></li></ul>
+	</li>
 </ul>
 
