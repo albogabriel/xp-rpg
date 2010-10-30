@@ -1,13 +1,13 @@
 <h2>Iterations</h2>
-
-<!-- First lane represents the non-assigned stories -->
 <ul>
+<!-- First lane represents the non-assigned stories -->
+
 	<li class="iterationLane">
 		<h2 style="text-align:center;">Non-assigned Stories</h2>
 		<br>
 	<ul>
 		<% @stories.each do |story| %>
-			<% if(story.iteration_id == nil) %>
+			<% if story.iteration_id == nil %>
 			<li class="storySticky" style="height:200px">
 				<h2>#<%= story.id %> - <%= story.title %></h2>
 				<!--div class="storyItem"><%= story.description %></div-->
@@ -20,10 +20,9 @@
 		<% end %>
 	</ul>
 		</li>
-</ul>
+
 <!-- end of first lane -->
 
-<ul>
 	<% @iterations.each do |iteration| %>
 		<li class="iterationLane">
 			<h2 style="text-align:center;">Iteration #<%= iteration.label %></h2>
