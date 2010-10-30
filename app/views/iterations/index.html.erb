@@ -1,5 +1,28 @@
 <h2>Iterations</h2>
 
+<!-- First lane represents the non-assigned stories -->
+<ul>
+	<li class="iterationLane">
+		<h2 style="text-align:center;">Non-assigned Stories</h2>
+		<br>
+	<ul>
+		<% @stories.each do |story| %>
+			<% if(story.iteration_id == nil) %>
+			<li class="storySticky" style="height:200px">
+				<h2>#<%= story.id %> - <%= story.title %></h2>
+				<!--div class="storyItem"><%= story.description %></div-->
+				<div class="storyItem"><b>Estimate: </b><%= story.estimate %></div>  
+				<div class="storyItem"><b>Status: </b><%= story.status %></div>
+				<div class="storyItem"><b>Iteration: </b><%= story.iteration_id %></div>
+				<div style="text-align:center"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %> - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %></div>
+			</li>
+			<% end %>
+		<% end %>
+	</ul>
+		</li>
+</ul>
+<!-- end of first lane -->
+
 <ul>
 	<% @iterations.each do |iteration| %>
 		<li class="iterationLane">

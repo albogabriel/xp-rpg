@@ -32,10 +32,10 @@
     <%= f.text_field :status %>
   </div>
   <div class="field">
-    <%= f.label :iteration_id %><br />
-    <%= f.text_field :iteration_id %>
-  </div>
-
+	Iteration
+	  <% iterations = Iteration.find(:all, :order => :id) %>
+	  <%= f.collection_select :iteration_id, iterations, :id, :label %>
+   </div>
   <div class="actions">
     <%= f.submit %>
   </div>

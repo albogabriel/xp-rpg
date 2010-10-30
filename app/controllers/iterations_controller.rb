@@ -3,6 +3,7 @@ class IterationsController < ApplicationController
   # GET /iterations.xml
   def index
     @iterations = Iteration.all
+    @stories = Story.all
 
     respond_to do |format|
       format.html # index.html.erb
