@@ -12,9 +12,9 @@
 				<h2>#<%= story.id %> - <%= story.title %></h2>
 				<!--div class="storyItem"><%= story.description %></div-->
 				<div class="storyItem"><b>Estimate: </b><%= story.estimate %></div>  
-				<div class="storyItem"><b>Status: </b><%= story.status %></div>
-				<div class="storyItem"><b>Iteration: </b><%= story.iteration_id %></div>
-				<div style="text-align:center"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %> - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %></div>
+				<!-- <div class="storyItem"><b>Status: </b><%= story.status %></div> -->
+				<!-- <div class="storyItem"><b>Iteration: </b><%= story.iteration_id %></div> -->
+				<div style="text-align:center"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %></div>
 			</li>
 			<% end %>
 		<% end %>
@@ -34,13 +34,13 @@
 <br>
 	<ul>
 		<% iteration.stories.each do |story| %>
-			<li class="storySticky" style="height:200px">
+			<li class="storySticky">
 				<h2>#<%= story.id %> - <%= story.title %></h2>
 				<!--div class="storyItem"><%= story.description %></div-->
 				<div class="storyItem"><b>Estimate: </b><%= story.estimate %></div>  
-				<div class="storyItem"><b>Status: </b><%= story.status %></div>
-				<div class="storyItem"><b>Iteration: </b><%= story.iteration_id %></div>
-				<div style="text-align:center"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %> - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %></div>
+				<!-- div class="storyItem"><b>Status: </b><%= story.status %></div> -->
+				<!-- <div class="storyItem"><b>Iteration: </b><%= story.iteration_id %></div> -->
+				<div style="text-align:center"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %> <!-- - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %> --></div>
 			</li>
 		<% end %>
 	</ul>

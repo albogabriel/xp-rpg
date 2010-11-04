@@ -107,11 +107,17 @@ body{
 .iterationLane{
     border:3px #F0F0F0 dashed; 
     padding:0px; 
-    width:300px;
+    width:200px;
 }
 
 .iterationLane ul li{
 	margin: 0 0em 2em -2em;
+}
+
+.iterationLane .storySticky{
+	height:135px;
+	width:150px;
+	font-size:80%;
 }
 
 
