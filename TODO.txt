@@ -1,3 +1,10 @@
 TODO list
 
+- Adjust Requirements views
+- Wire requirements to iterations and alert user about requirements not met in index view.
+
+
+
+Refactorings:
+
 - content class has been defined with a -moz-max-content width, which only works for firefox. Chrome version should be found.
