@@ -10,10 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101013000912) do
+ActiveRecord::Schema.define(:version => 20101104022242) do
 
   create_table "iterations", :force => true do |t|
     t.string   "label"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "requirements", :force => true do |t|
+    t.integer  "iteration_id"
+    t.integer  "story_id"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

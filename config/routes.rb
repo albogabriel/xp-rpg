@@ -1,5 +1,7 @@
 App01::Application.routes.draw do
   
+  resources :requirements
+
   resources :iterations do
      resources :stories
    end
