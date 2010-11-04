@@ -26,6 +26,12 @@
 	<% @iterations.each do |iteration| %>
 		<li class="iterationLane">
 			<h2 style="text-align:center;">Iteration #<%= iteration.label %></h2>
+			
+			<% @requirements.each do |requirement| %>
+				<% if (iteration.id == requirement.iteration_id) %>
+					<div style="color:red; font-size:9px;text-align:center">This iteration is the deadline for a requirement</div>
+				<% end %>
+			<% end %>
 			<div style="text-align:center">
 				<%= link_to 'Show', iteration %> - 
 				<%= link_to 'Edit', edit_iteration_path(iteration) %> - 
