@@ -104,6 +104,10 @@ body{
 		clear:both;
 }
 
+.fixedSizeContent{
+	width:1280px;
+}
+
 .iterationLane{
     border:3px #F0F0F0 dashed; 
     padding:0px; 
@@ -115,11 +119,30 @@ body{
 }
 
 .iterationLane .storySticky{
-	height:135px;
+	min-height:155px;
+	height:100%;
 	width:150px;
 	font-size:80%;
 }
 
+.iterationLane .storySticky:hover,.iterationLane .storySticky:focus{
+	-moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);  
+	-webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);  
+	box-shadow:10px 10px 7px rgba(0,0,0,.7);  
+	-webkit-transform: scale(1.05);  
+	-moz-transform: scale(1.05);  
+	-o-transform: scale(1.05);  
+	-moz-transition:-moz-transform .15s linear;  
+	-o-transition:-o-transform .15s linear;
+	-webkit-transition:-webkit-transform .15s linear;
+	position:relative;  
+	z-index:5; 
+}
+
+.iterationStoryItem{
+	font-family:"Reenie Beanie",arial,sans-serif;  
+	font-size:180%;
+}
 
 #footer{
 	clear:both;
@@ -169,7 +192,7 @@ body{
 	-webkit-transition:-webkit-transform .15s linear;
 	position:relative;  
 	z-index:5; 
-	 }
+}
 
 ul li a{
 	text-decoration:none;

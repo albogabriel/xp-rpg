@@ -2,6 +2,7 @@ TODO list
 
 - Adjust Requirements views
 - Wire requirements to iterations and alert user about requirements not met in index view.
+- Add iteration 0 (non-assigned) to dropdown.
 
 
 
