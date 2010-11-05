@@ -13,7 +13,13 @@
 
 <% @requirements.each do |requirement| %>
   <tr>
-    <td>#<%= requirement.iteration.id %></td>
+    <td>
+	<% @iterations.each do |iteration| %>
+		<% if iteration.id == requirement.iteration_id %>
+			#<%= iteration.label %>
+		<% end %>
+	<% end %>
+	</td>
     <td>#<%= requirement.story.id %> - <%= requirement.story.title %></td>
     <td><%= requirement.description %></td>
     <td><%= link_to 'Show', requirement %></td>

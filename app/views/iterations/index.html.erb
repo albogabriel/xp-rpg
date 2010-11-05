@@ -1,28 +1,5 @@
 <h2>Iterations</h2>
 <ul>
-<!-- First lane represents the non-assigned stories -->
-
-	<li class="iterationLane">
-		<h2 style="text-align:center;">Non-assigned Stories</h2>
-		<br>
-	<ul>
-		<% @stories.each do |story| %>
-			<% if story.iteration_id == nil %>
-			<li class="storySticky" style="height:200px">
-				<h2>#<%= story.id %> - <%= story.title %></h2>
-				<!--div class="iterationStoryItem"><%= story.description %></div-->
-				<div class="iterationStoryItem"><b>Estimate: </b><%= story.estimate %></div>  
-				<!-- <div class="iterationStoryItem"><b>Status: </b><%= story.status %></div> -->
-				<!-- <div class="storyItem"><b>Iteration: </b><%= story.iteration_id %></div> -->
-				<div class="iterationStoryItem" style="text-align:center; margin-top:3px"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %></div>
-			</li>
-			<% end %>
-		<% end %>
-	</ul>
-		</li>
-
-<!-- end of first lane -->
-
 	<% @iterations.each do |iteration| %>
 		<li class="iterationLane">
 			<h2 style="text-align:center;">Iteration #<%= iteration.label %></h2>
@@ -43,18 +20,16 @@
 			<%= form_for(story) do |f| %>
 			<li class="storySticky">
 				<h2>#<%= story.id %> - <%= story.title %></h2>
-				<!--div class="storyItem"><%= story.description %></div-->
 				<div class="iterationStoryItem"><b>Estimate: </b><%= story.estimate %></div>  
-				<!-- div class="iterationStoryItem"><b>Status: </b><%= story.status %></div> -->
-				<!-- <div class="iterationStoryItem"><b>Iteration: </b><%= story.iteration_id %></div> -->
-				<div class="iterationStoryItem">Iteration:<br> <% iterations = Iteration.find(:all, :order => :id) %><%= f.collection_select :iteration_id, iterations, :id, :label %>
-				<%= f.submit %></div>
-				<div class="iterationStoryItem"style="text-align:center; margin-top:3px"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %> <!-- - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %> --></div>
+				<div class="iterationStoryItem"><b>Iteration: </b>
+					<% iterations = Iteration.find(:all, :order => :id) %>
+					<%= f.collection_select :iteration_id, iterations, :id, :label %>
+					<%= f.submit %>
+				</div>
+				<div style="text-align:center; margin-top:3px"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %> <!-- - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %> --></div>
 			</li>
-			
 			<% end %>
 		<% end %>
-		,
 	</ul>
 		</li>
 <% end %>

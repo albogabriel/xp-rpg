@@ -3,6 +3,7 @@ class RequirementsController < ApplicationController
   # GET /requirements.xml
   def index
     @requirements = Requirement.all
+    @iterations = Iteration.all
 
     respond_to do |format|
       format.html # index.html.erb
