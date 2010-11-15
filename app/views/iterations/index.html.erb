@@ -23,6 +23,7 @@
 			<li class="storySticky">
 				<h2>#<%= story.id %> - <%= story.title %></h2>
 				<div class="iterationStoryItem"><b>Estimate: </b><%= story.estimate %></div>  
+				<div class="storyItem"><b>Business Value: </b><%= story.businessValue %></div>
 				<div class="iterationStoryItem"><b>Iteration: </b>
 					<% iterations = Iteration.find(:all, :order => :id) %>
 					<%= f.collection_select :iteration_id, iterations, :id, :label %>

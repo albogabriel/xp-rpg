@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101104022242) do
+ActiveRecord::Schema.define(:version => 20101115184903) do
 
   create_table "iterations", :force => true do |t|
     t.string   "label"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20101104022242) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "iteration_id"
+    t.string   "businessValue", :default => "M"
   end
 
 end
