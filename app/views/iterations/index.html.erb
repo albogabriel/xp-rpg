@@ -15,8 +15,10 @@
 				<%= link_to 'Destroy', iteration, :confirm => 'Are you sure?', :method => :delete %>
 			</div>
 <br>
+<% 	totalOfPoints = 0 %>
 	<ul>
 		<% iteration.stories.each do |story| %>
+		<% totalOfPoints = totalOfPoints + story.estimate.to_i %>
 			<%= form_for(story) do |f| %>
 			<li class="storySticky">
 				<h2>#<%= story.id %> - <%= story.title %></h2>
@@ -31,6 +33,7 @@
 			<% end %>
 		<% end %>
 	</ul>
+	<h2 style="text-align:center;">Total of Points: <%= totalOfPoints %></h2>
 		</li>
 <% end %>
 	<li>
