@@ -2,7 +2,8 @@
 <ul>
 	<% @iterations.each do |iteration| %>
 		<li class="iterationLane">
-			<h2 style="text-align:center;">Iteration #<%= iteration.label %></h2>
+			<% iteration.label == "Story Pile"? label = iteration.label : label = "Iteration #"+ iteration.label %>
+			<h2 style="text-align:center;"><%= label%></h2>
 			
 			<% @requirements.each do |requirement| %>
 				<% if (iteration.id == requirement.iteration_id) %>
