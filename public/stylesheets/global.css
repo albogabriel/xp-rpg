@@ -157,6 +157,10 @@ body{
 	padding:10px;
 }
 
+.requirementsStickies .storySticky {
+	background:#CEF;
+}
+
 .storySticky h2{
 	font-family: "Neucha";
 	font-size:200%;

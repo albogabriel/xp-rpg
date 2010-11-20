@@ -1,35 +1,23 @@
-<div class="fixedSizeContent">
 <h1>Requirements</h1>
-
-<table>
-  <tr>
-    <th>Iteration</th>
-    <th>Story</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<div class="fixedSizeContent">
+<ul class="requirementsStickies">
 <% @requirements.each do |requirement| %>
-  <tr>
-    <td>
+  <li class="storySticky">
+	
+	<h2>Requirement #<%= requirement.id %></h2>
 	<% @iterations.each do |iteration| %>
 		<% if iteration.id == requirement.iteration_id %>
-			#<%= iteration.label %>
+			<div class="storyItem"><b>Iteration: </b>#<%= iteration.label %></div>
 		<% end %>
 	<% end %>
-	</td>
-    <td>#<%= requirement.story.id %> - <%= requirement.story.title %></td>
-    <td><%= requirement.description %></td>
-    <td><%= link_to 'Show', requirement %></td>
-    <td><%= link_to 'Edit', edit_requirement_path(requirement) %></td>
-    <td><%= link_to 'Destroy', requirement, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+	
+	 <div class="storyItem"><b>Story: </b>#<%= requirement.story.id %></div> 
+	<div class="storyItem"><%= requirement.story.title %></div>
+	 <div class="storyItem"><b>Description: </b><%= requirement.description %></div>
+    
+	<div style="text-align:center"><%= link_to 'Show', requirement %> - <%= link_to 'Edit', edit_requirement_path(requirement) %> - <%= link_to 'Destroy', requirement, :confirm => 'Are you sure?', :method => :delete %></div>
+  </li>
 <% end %>
-</table>
 
-<br />
-
-<%= link_to 'New Requirement', new_requirement_path %>
-</div>
+<li class="newItem"><%= link_to 'New Requirement', new_requirement_path %></li></ul>
+<div>
