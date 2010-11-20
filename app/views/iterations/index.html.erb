@@ -1,45 +1,47 @@
 <h2>Iterations</h2>
 <ul>
-	<% @iterations.each do |iteration| %>
-		<li class="iterationLane">
-			<% iteration.label == "Story Pile"? label = iteration.label : label = "Iteration #"+ iteration.label %>
-			<h2 style="text-align:center;"><%= label%></h2>
-			
-			<% @requirements.each do |requirement| %>
-				<% if (iteration.id == requirement.iteration_id) %>
-					<div style="color:red; font-size:9px;text-align:center">This iteration is the deadline for a requirement</div>
-				<% end %>
-			<% end %>
-			<div style="text-align:center">
-				<%= link_to 'Show', iteration %> - 
-				<%= link_to 'Edit', edit_iteration_path(iteration) %> - 
-				<%= link_to 'Destroy', iteration, :confirm => 'Are you sure?', :method => :delete %>
-			</div>
-<br>
-<% 	totalOfPoints = 0 %>
-	<ul>
-		<% iteration.stories.each do |story| %>
-		<% totalOfPoints = totalOfPoints + story.estimate.to_i %>
-			<%= form_for(story) do |f| %>
-			<li class="storySticky">
-				<h2>#<%= story.id %> - <%= story.title %></h2>
-				<div class="iterationStoryItem"><b>Estimate: </b><%= story.estimate %></div>  
-				<div class="storyItem"><b>Business Value: </b><%= story.businessValue %></div>
-				<div class="iterationStoryItem"><b>Iteration: </b>
-					<% iterations = Iteration.find(:all, :order => :id) %>
-					<%= f.collection_select :iteration_id, iterations, :id, :label %>
-					<%= f.submit %>
-				</div>
-				<div style="text-align:center; margin-top:3px"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %> <!-- - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %> --></div>
-			</li>
-			<% end %>
-		<% end %>
-	</ul>
-	<h2 style="text-align:center;">Total of Points: <%= totalOfPoints %></h2>
-		</li>
-<% end %>
-	<li>
-		<div class="newItem"><%= link_to 'New Iteration', new_iteration_path %></li></ul>
-	</li>
+  <% @iterations.each do |iteration| %>
+      <li class="iterationLane">
+        <% iteration.label == "Story Pile" ? label = iteration.label : label = "Iteration #"+ iteration.label %>
+        <h2 style="text-align:center;"><%= label %></h2>
+
+        <% @requirements.each do |requirement| %>
+            <% if (iteration.id == requirement.iteration_id) %>
+                <div style="color:red; font-size:9px;text-align:center">This iteration is the deadline for a
+                  requirement
+                </div>
+            <% end %>
+        <% end %>
+        <div style="text-align:center">
+          <%= link_to 'Show', iteration %> -
+          <%= link_to 'Edit', edit_iteration_path(iteration) %> -
+          <%= link_to 'Destroy', iteration, :confirm => 'Are you sure?', :method => :delete %>
+        </div>
+        <br>
+        <% totalOfPoints = 0 %>
+        <ul>
+          <% iteration.stories.each do |story| %>
+              <% totalOfPoints = totalOfPoints + story.estimate.to_i %>
+              <%= form_for(story) do |f| %>
+                  <li class="storySticky">
+                    <h2>#<%= story.id %> - <%= story.title %></h2>
+
+                    <div class="iterationStoryItem"><b>Estimate: </b><%= story.estimate %></div>
+                    <div class="storyItem"><b>Business Value: </b><%= story.businessValue %></div>
+                    <div class="iterationStoryItem"><b>Iteration: </b>
+                      <% iterations = Iteration.find(:all, :order => :id) %>
+                      <%= f.collection_select :iteration_id, iterations, :id, :label %>
+                      <%= f.submit %>
+                    </div>
+                    <div style="text-align:center; margin-top:3px"><%= link_to 'Show', story %>
+                      - <%= link_to 'Edit', edit_story_path(story) %> <!-- - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %> --></div>
+                  </li>
+              <% end %>
+          <% end %>
+        </ul>
+        <h2 style="text-align:center;">Total of Points: <%= totalOfPoints %></h2>
+      </li>
+  <% end %>
+  <li class="newItem"><%= link_to 'New Iteration', new_iteration_path %></li>
 </ul>
 

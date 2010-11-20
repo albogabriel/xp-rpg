@@ -1,23 +1,26 @@
 <h1>Requirements</h1>
 <div class="fixedSizeContent">
-<ul class="requirementsStickies">
-<% @requirements.each do |requirement| %>
-  <li class="storySticky">
-	
-	<h2>Requirement #<%= requirement.id %></h2>
-	<% @iterations.each do |iteration| %>
-		<% if iteration.id == requirement.iteration_id %>
-			<div class="storyItem"><b>Iteration: </b>#<%= iteration.label %></div>
-		<% end %>
-	<% end %>
-	
-	 <div class="storyItem"><b>Story: </b>#<%= requirement.story.id %></div> 
-	<div class="storyItem"><%= requirement.story.title %></div>
-	 <div class="storyItem"><b>Description: </b><%= requirement.description %></div>
-    
-	<div style="text-align:center"><%= link_to 'Show', requirement %> - <%= link_to 'Edit', edit_requirement_path(requirement) %> - <%= link_to 'Destroy', requirement, :confirm => 'Are you sure?', :method => :delete %></div>
-  </li>
-<% end %>
+  <ul class="requirementsStickies">
+    <% @requirements.each do |requirement| %>
+        <li class="storySticky">
 
-<li class="newItem"><%= link_to 'New Requirement', new_requirement_path %></li></ul>
-<div>
+          <h2>Requirement #<%= requirement.id %></h2>
+          <% @iterations.each do |iteration| %>
+              <% if iteration.id == requirement.iteration_id %>
+                  <div class="storyItem"><b>Iteration: </b>#<%= iteration.label %></div>
+              <% end %>
+          <% end %>
+
+          <div class="storyItem"><b>Story: </b>#<%= requirement.story.id %></div>
+          <div class="storyItem"><%= requirement.story.title %></div>
+          <div class="storyItem"><b>Description: </b><%= requirement.description %></div>
+
+          <div style="text-align:center"><%= link_to 'Show', requirement %>
+            - <%= link_to 'Edit', edit_requirement_path(requirement) %>
+            - <%= link_to 'Destroy', requirement, :confirm => 'Are you sure?', :method => :delete %></div>
+        </li>
+    <% end %>
+
+    <li class="newItem"><%= link_to 'New Requirement', new_requirement_path %></li>
+  </ul>
+</div>
