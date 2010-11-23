@@ -8,7 +8,7 @@
     <div class="storyItem"><b>Estimate: </b><%= story.estimate %></div>  
 	<!-- # <div class="storyItem"><b>Status: </b><%= story.status %></div> -->
 	<div class="storyItem"><b>Business Value: </b><%= story.businessValue %></div>
-	<div class="storyItem" style="text-align:justified">
+	<div class="storyItem" style="text-align:justify">
 	<% @found = false%>
 	<%  @iterations.each do |iteration| %>
 		<%	if iteration.id == story.iteration_id  %>
@@ -25,4 +25,4 @@
 <% end %>
 
 <li class="newItem"><%= link_to 'New Story', new_story_path %></li></ul>
-<div>
+</div>

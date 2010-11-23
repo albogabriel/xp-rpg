@@ -16,14 +16,14 @@
 		<div class="stickyLogo" ><div class="logoTitle"><b>XP</b></div><p><b>Release Planning Game</b></p></div>
 	</div>
 	<div class="menu">
-		<div class="menuItem" onclick="window.location = '<%= url_for :controller =>'project', :action => 'home' %>'">Home</div>
+		<div class="menuItem" onclick="window.location = '<%= url_for :controller =>'project', :action => 'home' %>'">Main</div>
 		<div class="menuItem" onclick="window.location = '<%= url_for :controller =>'iterations', :action => 'index' %>'">Iterations</div>   
 		<div class="menuItem" onclick="window.location = '<%= url_for :controller =>'stories', :action => 'index' %>'">Stories</div>    
 		<div class="menuItem" onclick="window.location = '<%= url_for :controller =>'requirements', :action => 'index' %>'">Requirements</div>
 		<div class="menuItem" onclick="window.location = '<%= url_for :controller =>'project', :action => 'about' %>'">About</div>
 	</div>
 	<div id="content"><%= yield %></div>
-	<div id="footer">Time now is <%= Time.now%></div>
+	<div id="footer"></div>
 </div>
 </body>
 </html>

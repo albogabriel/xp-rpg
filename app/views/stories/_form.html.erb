@@ -31,11 +31,8 @@
 <label for="businessValue">Business Value<br> 
     <%= f.text_field :businessValue %></label>
   </div>
-  <div class="field">
-    <%= f.label :status %><br />
-    <%= f.text_field :status %>
-  </div>
-  <div class="field">
+
+    <div class="field">
 	Iteration
 	  <% iterations = Iteration.find(:all, :order => :id) %>
 	  <%= f.collection_select :iteration_id, iterations, :id, :label %>

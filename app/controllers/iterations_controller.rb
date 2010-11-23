@@ -12,8 +12,8 @@ class IterationsController < ApplicationController
     end
   end
 
-  # GET /iterations/1
-  # GET /iterations/1.xml
+  # get /iterations/1
+  # get /iterations/1.xml
   def show
     @iteration = Iteration.find(params[:id])
 
@@ -23,8 +23,8 @@ class IterationsController < ApplicationController
     end
   end
 
-  # GET /iterations/new
-  # GET /iterations/new.xml
+  # get /iterations/new
+  # get /iterations/new.xml
   def new
     @iteration = Iteration.new
 
@@ -34,19 +34,19 @@ class IterationsController < ApplicationController
     end
   end
 
-  # GET /iterations/1/edit
+  # get /iterations/1/edit
   def edit
     @iteration = Iteration.find(params[:id])
   end
 
-  # POST /iterations
-  # POST /iterations.xml
+  # post /iterations
+  # post /iterations.xml
   def create
     @iteration = Iteration.new(params[:iteration])
 
     respond_to do |format|
       if @iteration.save
-        format.html { redirect_to(@iteration, :notice => 'Iteration was successfully created.') }
+        format.html { redirect_to(@iteration, :notice => 'iteration was successfully created.') }
         format.xml  { render :xml => @iteration, :status => :created, :location => @iteration }
       else
         format.html { render :action => "new" }
@@ -55,14 +55,14 @@ class IterationsController < ApplicationController
     end
   end
 
-  # PUT /iterations/1
-  # PUT /iterations/1.xml
+  # put /iterations/1
+  # put /iterations/1.xml
   def update
     @iteration = Iteration.find(params[:id])
 
     respond_to do |format|
       if @iteration.update_attributes(params[:iteration])
-        format.html { redirect_to(@iteration, :notice => 'Iteration was successfully updated.') }
+        format.html { redirect_to(@iteration, :notice => 'iteration was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -71,8 +71,8 @@ class IterationsController < ApplicationController
     end
   end
 
-  # DELETE /iterations/1
-  # DELETE /iterations/1.xml
+  # delete /iterations/1
+  # delete /iterations/1.xml
   def destroy
     @iteration = Iteration.find(params[:id])
     @iteration.destroy

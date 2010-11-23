@@ -4,7 +4,7 @@ class Story < ActiveRecord::Base
 	
 		validates :title, :presence => true
 		validates :description, :presence => true,
-		                        :length => { :minimum => 5 }  
+		                        :length => { :minimum => 5 }
     validates_numericality_of   :estimate,
                                 :only_integer => true   
                       
