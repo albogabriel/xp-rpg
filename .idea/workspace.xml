@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager" verified="true">
-    <list default="true" readonly="true" id="4d54ee00-b1ce-4e9f-ba10-cc93665eddc8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" readonly="true" id="4d54ee00-b1ce-4e9f-ba10-cc93665eddc8" name="Default" comment="" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="albotcc.iws" />
     <option name="TRACKING_ENABLED" value="true" />
