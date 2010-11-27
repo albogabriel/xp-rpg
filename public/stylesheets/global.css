@@ -115,28 +115,25 @@ body{
 }
 
 .iterationLane ul li{
-	margin: 0 0em 2em -2em;
+	margin: 0 0em 2em -2.5em;
 }
 
-.iterationLane .storySticky{
+.iterationStorySticky{
 	min-height:155px;
 	height:100%;
 	width:150px;
 	font-size:80%;
-}
-
-.iterationLane .storySticky:hover,.iterationLane .storySticky:focus{
-	-moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    background:#FEFEBB; 
+	padding:10px;
+    -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
 	-webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
 	box-shadow:10px 10px 7px rgba(0,0,0,.7);
-	-webkit-transform: scale(1.05);
-	-moz-transform: scale(1.05);
-	-o-transform: scale(1.05);
-	-moz-transition:-moz-transform .15s linear;
-	-o-transition:-o-transform .15s linear;
-	-webkit-transition:-webkit-transform .15s linear;
-	position:relative;  
-	z-index:5;
+}
+
+.iterationStorySticky h2{
+	font-family: "Neucha";
+	font-size:150%;
+	text-align:center;
 }
 
 .iterationStoryItem{

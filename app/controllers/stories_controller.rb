@@ -62,7 +62,7 @@ class StoriesController < ApplicationController
 
     respond_to do |format|
       if @story.update_attributes(params[:story])
-        format.html { redirect_to(@story, :notice => 'Story was successfully updated.') }
+        format.html {redirect_to(iterations_url, :notice => 'Story was successfully updated.')}
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

@@ -23,14 +23,14 @@
               <% iteration.stories.each do |story| %>
                   <% totalOfPoints = totalOfPoints + story.estimate.to_i %>
                   <%= form_for(story) do |f| %>
-                      <li class="storySticky">
+                      <li class="iterationStorySticky">
                         <h2>#<%= story.id %> - <%= story.title %></h2>
-
                         <div class="iterationStoryItem"><b>Estimate: </b><%= story.estimate %></div>
-                        <div class="storyItem"><b>Business Value: </b><%= story.businessValue %></div>
+                        <div class="iterationStoryItem"><b>Business Value: </b><%= story.businessValue %></div>
                         <div class="iterationStoryItem"><b>Iteration: </b>
                           <% iterations = Iteration.find(:all, :order => :id) %>
-                          <%= f.collection_select(:iteration_id, iterations, :id, :label, {:onchange => "alert('hello')" })%>     
+                          <%= f.collection_select(:iteration_id, iterations, :id, :label)%>
+                          <% story.status = "from_iterations"%>
                           <%= f.submit %>
                         </div>
                         <div style="text-align:center; margin-top:3px"><%= link_to 'Show', story %>
