@@ -1,6 +1,18 @@
 App01::Application.routes.draw do
   
-  resources :projects
+  get "reports/index"
+
+  get "reports/businessValueReport"
+
+  get "reports/requirementsReport"
+
+  get "reports/mainGoalReport"
+
+  get "reports/defectsReport"
+
+  resources :projects do
+    resources :iterations
+  end
 
   resources :requirements
 

@@ -1,0 +1,46 @@
+<h1>Reports</h1>
+<% @requirementsArray = Array.new %>
+<% @requirementsArray = @controller.requirementsReport %>
+<% @requirementsMet = @requirementsArray[0] %>
+<% @requirementsNotMet = @requirementsArray[1] %>
+
+<h2>Requirements</h2>
+<h3>Requirements Met</h3>
+<% @requirementsMet.each do |met| %>
+    <%= met %><br>
+<% end %>
+<h3>Requirements Not Met</h3>
+<% @requirementsNotMet.each do |notMet| %>
+    <%= notMet %><br>
+<% end %>
+<ul>
+  <% @iterations.each do |iteration| %>
+      <li class="iterationLane reportsLane">
+        <% iteration.label == "Story Pile" ? label = "Non-assigned Stories" : label = "Iteration #"+ iteration.label %>
+        <h2 style="text-align:center;"><%= label %></h2>
+
+        <% totalOfPoints = 0 %>
+        <% numberOfHighBV = 0 %>
+        <% numberOfMediumBV = 0 %>
+        <% numberOfLowBV = 0 %>
+        <% iteration.stories.each do |story| %>
+            <% totalOfPoints = totalOfPoints + story.estimate.to_i %>
+            <% if story.businessValue == "H" %>
+                <% numberOfHighBV = numberOfHighBV+1 %>
+            <% elsif story.businessValue == "M" %>
+                <% numberOfMediumBV = numberOfMediumBV+1 %>
+            <% elsif numberOfLowBV = numberOfLowBV+1 %>
+            <% end %>
+        <% end %>
+        Total of Stories: <%= iteration.stories.size %>
+        <br>
+        Total of Points: <%= totalOfPoints %>
+        <br>
+
+        <p>Business value:<br>
+          High: <%= numberOfHighBV %><br>
+          Medium: <%= numberOfMediumBV %><br>
+          Low: <%= numberOfLowBV %> </p>
+      </li>
+  <% end %>
+</ul>

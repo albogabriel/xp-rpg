@@ -72,7 +72,11 @@ body{
 	padding:36px 22px 16px 22px;
 	margin:0px 0 0 20px;
     float:left;
-    width:150px;
+    width:130px;
+}
+
+.mainView{
+    background:#CCEEFF;
 }
 
 .newItem{
@@ -112,6 +116,11 @@ body{
     border:3px #F0F0F0 dashed; 
     padding:0px; 
     width:200px;
+}
+
+.reportsLane{
+    margin:0 2em 2em 0 !important;
+    width:150px;
 }
 
 .iterationLane ul li{
