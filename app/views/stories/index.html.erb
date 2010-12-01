@@ -1,28 +1,38 @@
 <h1>Stories</h1>
 <div class="fixedSizeContent">
-<ul>
-<% @stories.each do |story| %>
-  <li class="storySticky">
-    <h2>#<%= story.id %> - <%= story.title %></h2>
-    <div class="storyItem"><%= story.description %></div>
-    <div class="storyItem"><b>Estimate: </b><%= story.estimate %></div>  
-	<!-- # <div class="storyItem"><b>Status: </b><%= story.status %></div> -->
-	<div class="storyItem"><b>Business Value: </b><%= story.businessValue %></div>
-	<div class="storyItem" style="text-align:justify">
-	<% @found = false%>
-	<%  @iterations.each do |iteration| %>
-		<%	if iteration.id == story.iteration_id  %>
-		<% @found = true%>
-    		<b>Iteration: </b><%= iteration.label %>
-		<% end %>
-	<% end %>
-		<% if @found != true %>
-			<b>Iteration: </b><%= @iterations.first.label %>
-		<% end %>
-	</div>
-    <div style="text-align:center"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %> - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %></div>
-  </li>
-<% end %>
+  <ul>
+    <% @stories.each do |story| %>
+        <li class="storySticky">
+          <h2>#<%= story.id %> - <%= story.title %></h2>
 
-<li class="newItem"><%= link_to 'New Story', new_story_path %></li></ul>
+          <div class="storyItem"><%= story.description %></div>
+          <div class="storyItem"><b>Estimate: </b><%= story.estimate %></div>
+          <!-- # <div class="storyItem"><b>Status: </b><%= story.status %></div> -->
+          <div class="storyItem"><b>Business Value: </b><%= story.businessValue %></div>
+          <div class="storyItem" style="text-align:justify">
+            <% @found = false %>
+            <% @iterations.each do |iteration| %>
+                <% if iteration.id == story.iteration_id %>
+                    <% @found = true %>
+                    <b>Iteration: </b><%= iteration.label %>
+                <% end %>
+            <% end %>
+            <% if @found != true %>
+                <b>Iteration: </b><%= @iterations.first.label %>
+            <% end %>
+            <% @requirements.each do |requirement| %>
+                <% if (story.id == requirement.story_id) %>
+                    <div style="color:red; margin-top:10px ;text-align:center">Required for iteration
+                      #<%= requirement.iteration_id %>
+                    </div>
+                <% end %>
+            <% end %>
+          </div>
+          <div style="text-align:center"><%= link_to 'Show', story %> - <%= link_to 'Edit', edit_story_path(story) %>
+            - <%= link_to 'Destroy', story, :confirm => 'Are you sure?', :method => :delete %></div>
+        </li>
+    <% end %>
+
+    <li class="newItem"><%= link_to 'New Story', new_story_path %></li>
+  </ul>
 </div>

@@ -4,6 +4,7 @@ class StoriesController < ApplicationController
   def index
     @stories = Story.all
     @iterations = Iteration.all
+    @requirements= Requirement.all
 
     respond_to do |format|
       format.html # index.html.erb
