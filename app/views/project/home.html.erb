@@ -1,8 +1,27 @@
 <div class="fixedSizeContent">
 <h1>XP Release Planning Game</h1>
 
-<p>Uma simulação de gerenciamento de projetos ágeis inspirado no Agile Release Planning Game de <a href="http://kingsinsight.com/">James King</a> e <a href="http://philippe.kruchten.com/">Phillippe Kruchten</a>.</p>
-</div>
+<p>An agile project management simulation inspired in <a href="http://kingsinsight.com/">James King</a>'s and <a href="http://philippe.kruchten.com/">Phillippe Kruchten</a>'s Agile Release Planning Game.</p>
 
+<h2>The Scenario: </h2>
+The team is the advanced party for the first mission to Mars. They have landed in Mars without any issues and a robot team landed to establish the base.
+
+For some reason, though, the automatic pilot fired the retro-rockets far too late. Instead of making a gentle descent, the team plunged into the Mars base, virtually destroying it.
+
+All communication has been lost and the team needs to set priorities without any guidance.
+
+Worse still, the team will run out of crucial resources in only a short time.
+
+<h2>What needs to be done</h2>
+
+The mission computer prepared an analysis of the team's chances of survival. If they do manage to repair the Mars Lander module in 7 iterations, survival will assured.
+
+Life on space without supplies is tough - besides repairing the Mars Lander, there are some requirements that need to be met in given spaces of time so that the team can survive. Apart from that, many amenities are required by the team in order to keep themselves out of stress, so it is important to see what they consider to be "a story of high business value".
+
+Your job is to plan iterations in order to finish repairing the Mars Lander, having all the requirements met and delivering as much high valued stories as possible.
+
+  <br><br>
 <div class="menuItem mainView" onclick="window.location = '<%= url_for :controller =>'project', :action => "reset" %>'">Start Simulation</div>
 <div class="menuItem mainView" onclick="window.location = '<%= url_for :controller =>'reports', :action => "index" %>'">Reports</div>
+<div class="menuItem mainView" onclick="window.location = '<%= url_for :controller =>'project', :action => "instructions" %>'">Instructions</div>
+</div>

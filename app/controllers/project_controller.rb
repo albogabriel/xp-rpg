@@ -2,7 +2,7 @@ class ProjectController < ApplicationController
   def home
   end
 
-  def cardwall
+  def instructions
   end
 
   def iterations

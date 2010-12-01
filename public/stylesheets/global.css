@@ -2,6 +2,16 @@ body{
 	background-image: url('/images/wb-bg2.png');
 }
 
+@font-face {
+font-family: neucha;
+src: url( "./Neucha.ttf");
+}
+
+@font-face {
+font-family: Reenie Beanie;
+src: url( "./ReenieBeanie.ttf");
+}
+
 #wrapper{
   min-height:800px;
 }
@@ -31,14 +41,14 @@ body{
 
 .stickyLogo p{
  /*   font-family: 'Yanone Kaffeesatz', serif;*/
-	font-family: 'Neucha', 'Helvetica', serif;
+	font-family: neucha, 'Helvetica', serif;
 	font-size:198%;
 	color:#0F0F0F;
 }
 
 .logoTitle{
 	padding-top:30px;
-	font-family:"Reenie Beanie",'Helvetica',sans-serif;  
+	font-family:Reenie Beanie,'Helvetica',sans-serif;
 	color:#DD0000;
 	font-size:600%;
 }
@@ -52,7 +62,7 @@ body{
 
 .menuItem, .newItem{
 	text-decoration:none;
-	font-family: 'Neucha', serif;
+	font-family: neucha, serif;
 	font-size:200%;
 	color:black;
 	list-style-type:none; 
@@ -140,13 +150,13 @@ body{
 }
 
 .iterationStorySticky h2{
-	font-family: "Neucha";
+	font-family: neucha;
 	font-size:150%;
 	text-align:center;
 }
 
 .iterationStoryItem{
-	font-family:"Reenie Beanie",arial,sans-serif;  
+	font-family:Reenie Beanie,arial,sans-serif;
 	font-size:180%;
 }
 
@@ -168,13 +178,13 @@ body{
 }
 
 .storySticky h2{
-	font-family: "Neucha";
+	font-family: neucha;
 	font-size:200%;
 	text-align:center;
 }
 
 .storyItem{
-	font-family:"Reenie Beanie",arial,sans-serif;  
+	font-family:Reenie Beanie,arial,sans-serif;
 	font-size:180%;
 	margin-bottom:8px;
 }
