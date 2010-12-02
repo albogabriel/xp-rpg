@@ -5,12 +5,19 @@
         <% iteration.label == "Story Pile" ? label = iteration.label : label = "Iteration #"+ iteration.label %>
         <h2 style="text-align:center;"><%= label %></h2>
 
+        <% @requirementsForThisIteration = Array.new %>
         <% @requirements.each do |requirement| %>
             <% if (iteration.id == requirement.iteration_id) %>
-                <div style="color:red; font-size:9px;text-align:center">Must meet requirement #<%= requirement.id %>
-                </div>
+                 <% @requirementsForThisIteration << requirement.id.to_s %>
             <% end %>
         <% end %>
+            <% if not @requirementsForThisIteration.blank? %>
+                <div style="color:red; font-size:9px;text-align:center">Must meet requirement(s):
+                  <% @requirementsForThisIteration.each do | requirementId | %>
+                    #<%= requirementId %>
+                  <% end %>
+                </div>
+            <% end %>
         <div style="text-align:center">
           <%= link_to 'Show', iteration %> -
           <%= link_to 'Edit', edit_iteration_path(iteration) %> -
@@ -48,6 +55,7 @@
           <% end %>
         </ul>
         <h2 style="text-align:center;">Total of Points: <%= totalOfPoints %></h2>
+        <p style="text-align:center; color:grey;">(Team's default velocity: 15)</p>
       </li>
   <% end %>
   <li class="newItem"><%= link_to 'New Iteration', new_iteration_path %></li>

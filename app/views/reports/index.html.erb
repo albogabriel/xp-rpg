@@ -6,13 +6,22 @@
 
 <h2>Requirements</h2>
 <h3>Requirements Met</h3>
-<% @requirementsMet.each do |met| %>
-    <%= met %><br>
+<% if @requirementsMet.empty? then %>
+    None.
+<% else %>
+    <% @requirementsMet.each do |met| %>
+        <%= met %><br>
+    <% end %>
 <% end %>
+
 <h3>Requirements Not Met</h3>
-<% @requirementsNotMet.each do |notMet| %>
-    <%= notMet %><br>
-<% end %>                                                                                       
+<% if @requirementsNotMet.empty? then %>
+    None.
+<% else %>
+    <% @requirementsNotMet.each do |notMet| %>
+        <%= notMet %><br>
+    <% end %>
+<% end %>
 <ul>
   <% @iterations.each do |iteration| %>
       <li class="iterationLane reportsLane">

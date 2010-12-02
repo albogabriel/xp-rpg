@@ -4,12 +4,12 @@ body{
 
 @font-face {
 font-family: neucha;
-src: url( "./Neucha.ttf");
+src: url( "../Neucha.ttf");
 }
 
 @font-face {
 font-family: Reenie Beanie;
-src: url( "./ReenieBeanie.ttf");
+src: url( "../ReenieBeanie.ttf");
 }
 
 #wrapper{
@@ -57,7 +57,7 @@ src: url( "./ReenieBeanie.ttf");
     float:left;
     /*width:75%;   */
     padding:15px;
-    margin-left:20px;
+    margin-left:8px;
 }
 
 .menuItem, .newItem{
