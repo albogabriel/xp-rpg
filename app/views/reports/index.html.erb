@@ -4,9 +4,13 @@
 <% @requirementsMet = @requirementsArray[0] %>
 <% @requirementsNotMet = @requirementsArray[1] %>
 
+<% if @requirementsNotMet.empty? %>
+    <h2 style="color: green; font-weight:bold">Congratulations! You've met all all the requirements!</h2>
+    <h2 style="color: green; font-weight:bold"> The scientists thank you and have promised to bring you a beautiful Mars rock in return.</h2>
+<% end %>
 
-<h2>Requirements</h2>
 <h3>Requirements Met</h3>
+<% maximumOfPointsExceeded = false%>
 <% if @requirementsMet.empty? then %>
     None.
 <% else %>
@@ -46,11 +50,34 @@
         <br>
         Total of Points: <%= totalOfPoints %>
         <br>
+        <% if (totalOfPoints > 15) && iteration.id != 0%>
+            <% maximumOfPointsExceeded = true %>
+        <p style="color:red">Whoa there! You've planned more than 15 points, the team's velocity!
+        Are you sure about that?</p>
+        <% end %>
 
         <p>Business value:<br>
           High: <%= numberOfHighBV %><br>
           Medium: <%= numberOfMediumBV %><br>
           Low: <%= numberOfLowBV %> </p>
+        <% iteration.label == "Story Pile" ? @storyPileHighs = numberOfHighBV : "" %>
       </li>
-  <% end %>
+<% end %>
 </ul>
+
+<div style="clear:both"><h2>Tips & Comments</h2>
+
+<% if @storyPileHighs != 0 %>
+    <% if @storyPileHighs == 1 %>
+        <p>You've got <%= @storyPileHighs %> story of high business value not planned for any iteration. Are you sure you don't want to replan it? They're crucial to the client!</p>
+        <% else %>
+        <p>You've got <%= @storyPileHighs %> stories of high business value not planned for any iteration. Are you sure you don't want to replan it? They're crucial to the client!</p>
+    <% end %>
+<% else%>
+    <p>Well done! All stories of high business value have been planned!</p>
+<% end %>
+
+<% if maximumOfPointsExceeded %>
+    <p>One or more iterations have more points planned than the team's velocity. Perhaps you might want to change that...</p>
+<% end %>
+</div>

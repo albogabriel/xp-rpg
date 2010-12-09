@@ -40,7 +40,6 @@ class ProjectController < ApplicationController
     ActiveRecord::Base.connection.execute('INSERT INTO iterations VALUES ("5","5",DATETIME(\' NOW \'),DATETIME(\' NOW \'));')
     ActiveRecord::Base.connection.execute('INSERT INTO iterations VALUES ("6","6",DATETIME(\' NOW \'),DATETIME(\' NOW \'));')
     ActiveRecord::Base.connection.execute('INSERT INTO iterations VALUES ("7","7",DATETIME(\' NOW \'),DATETIME(\' NOW \'));')
-    ActiveRecord::Base.connection.execute('INSERT INTO iterations VALUES ("8","8",DATETIME(\' NOW \'),DATETIME(\' NOW \'));')
   end
 
   def insertStories
@@ -86,18 +85,18 @@ class ProjectController < ApplicationController
     ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("3","3","8","Our power resources won\'t last longer than 3 iterations. We need a power generator!",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
     ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("4","5","34","We need a water plant by iteration 5 or we won\'t have any water to drink.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
     ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("5","5","12","We love to sing. By iteration 5 we want to be able to have fun with a karaoke machine.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
-    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("6","8","16","As part of fixing the Mars Lander, this should be completed by iteration 8.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
-    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("7","8","17","As part of fixing the Mars Lander, this should be completed by iteration 8.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
-    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("8","8","18","As part of fixing the Mars Lander, this should be completed by iteration 8.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
-    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("9","8","19","As part of fixing the Mars Lander, this should be completed by iteration 8.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
-    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("10","8","20","As part of fixing the Mars Lander, this should be completed by iteration 8.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
-    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("11","8","21","As part of fixing the Mars Lander, this should be completed by iteration 8.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
-    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("12","8","22","As part of fixing the Mars Lander, this should be completed by iteration 8.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
-    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("13","8","23","As part of fixing the Mars Lander, this should be completed by iteration 8.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
-    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("14","8","24","As part of fixing the Mars Lander, this should be completed by iteration 8.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
-    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("15","8","25","As part of fixing the Mars Lander, this should be completed by iteration 8.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
-    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("16","8","26","As part of fixing the Mars Lander, this should be completed by iteration 8.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
-    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("17","8","27","As part of fixing the Mars Lander, this should be completed by iteration 8.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
+    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("6","7","16","As part of fixing the Mars Lander, this should be completed by iteration 7.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
+    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("7","7","17","As part of fixing the Mars Lander, this should be completed by iteration 7.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
+    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("8","7","18","As part of fixing the Mars Lander, this should be completed by iteration 7.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
+    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("9","7","19","As part of fixing the Mars Lander, this should be completed by iteration 7.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
+    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("10","7","20","As part of fixing the Mars Lander, this should be completed by iteration 7.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
+    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("11","7","21","As part of fixing the Mars Lander, this should be completed by iteration 7.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
+    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("12","7","22","As part of fixing the Mars Lander, this should be completed by iteration 7.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
+    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("13","7","23","As part of fixing the Mars Lander, this should be completed by iteration 7.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
+    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("14","7","24","As part of fixing the Mars Lander, this should be completed by iteration 7.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
+    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("15","7","25","As part of fixing the Mars Lander, this should be completed by iteration 7.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
+    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("16","7","26","As part of fixing the Mars Lander, this should be completed by iteration 7.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
+    ActiveRecord::Base.connection.execute('INSERT INTO requirements VALUES ("17","7","27","As part of fixing the Mars Lander, this should be completed by iteration 7.",DATETIME(\'NOW\'),DATETIME(\'NOW\'));')
  end
 
 end

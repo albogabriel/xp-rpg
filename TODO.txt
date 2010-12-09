@@ -1,8 +1,5 @@
 TODO list
 
-- dropdown to business values all around.
-- dropdown to stories in requirements edit view.
-
 Refactorings:
 
 - content class has been defined with a -moz-max-content width, which only works for firefox. Chrome version should be found.
