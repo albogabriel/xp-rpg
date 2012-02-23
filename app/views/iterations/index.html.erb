@@ -1,8 +1,8 @@
 <h2>Iterations</h2>
 <ul>
-  <% @iterations.each do |iteration| %>
+  <%@iterations.each do |iteration| %>
       <li class="iterationLane">
-        <% iteration.label == "Story Pile" ? label = iteration.label : label = "Iteration #"+ iteration.label %>
+        <% isStoryPile?(iteration) ? label = iteration.label : label = "Iteration #"+ iteration.label %>
         <h2 style="text-align:center;"><%= label %></h2>
 
         <% @requirementsForThisIteration = Array.new %>
